@@ -1,0 +1,145 @@
+/* main.css */
+
+:root {
+    --primary-color: purple;
+    --secondary-color: #511266;
+  }
+  
+  .logo {
+    max-width: 50%;
+    height: auto;
+    margin: 20px 0 20px 0;
+    animation: bounceLogo 1s infinite alternate;
+  }
+  
+  /* Keyframe animation for bounceLogo */
+  @keyframes bounceLogo {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .purple-line {
+    border-bottom: 5px;
+    border-top: 5px solid var(--primary-color);
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .animated-link {
+    position: relative;
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .animated-link:hover {
+    color: var(--secondary-color);
+  }
+  
+  .animated-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .animated-link:hover::before {
+    width: 100%;
+  }
+  
+  .content-image {
+    max-width: 100%;
+    height: auto;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Keyframe animation for fadeIn */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .content-text {
+    margin-top: 12px;
+    text-align: right;
+  }
+  
+  /* Additional styles to align the text to the left */
+  @media (min-width: 768px) {
+    /* Apply these styles for medium and larger screens */
+    .content-text {
+      text-align: left;
+      margin-top: -50px;
+      margin-left: -25px;
+      position: relative;
+    }
+  
+    .bottom-md-right {
+      position: inherit;
+      bottom: 10px;
+      right: -600px;
+      margin-bottom: 0px;
+    }
+  
+    footer {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--primary-color);
+    }
+  
+    /* Social links styles */
+    .social-links {
+      margin-top: 10px;
+      order: 4;
+      display: flex;
+      align-items: center;
+    }
+  
+    .social-link,
+    .social-text-link {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  
+    .social-link img {
+      width: 30px;
+      height: auto;
+      margin-bottom: -8px;
+    }
+  
+    .social-link:hover {
+      color: var(--secondary-color);
+    }
+  
+    /* Additional style for text links */
+    .social-text-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+  
+    .social-text-link:hover {
+      color: var(--secondary-color);
+    }
+  
+    footer p {
+      margin: 0;
+      order: 1;
+      flex: 1;
+      text-align: left;
+    }
+  }
+  

@@ -1,0 +1,97 @@
+/* contact.css */
+
+/* Add this rule for the logo animation */
+.logo {
+    max-width: 50%;
+    height: auto;
+    margin: 20px 0 20px 0;
+    animation: bounceLogo 1s infinite alternate; /* Bounce animation */
+}
+
+/* Center the <p> element */
+.centered-text {
+    text-align: center;
+}
+
+/* Style the contact form */
+.form-container {
+    background-color: rgb(209, 164, 232);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+form {
+    background-color: purple;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 0;
+    animation: slideInRight 1s ease-in-out; /* Slide-in animation */
+}
+
+form label,
+form input,
+form textarea {
+    color: darkpurple;
+}
+
+form button {
+    background-color: #a8247a !important;
+    color: darkpurple;
+    border: 1px solid darkpurple;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Additional animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframe animation for bounceLogo */
+@keyframes bounceLogo {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+/* Body styles */
+body {
+    background-color: #ffffff; /* Light grey background color */
+    font-family: 'Roboto', sans-serif; /* Set font to Roboto */
+}
+
+/* Social links styles */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-link {
+    margin-right: 10px;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Add any other styles as needed */
